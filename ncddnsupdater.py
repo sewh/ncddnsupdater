@@ -3,8 +3,8 @@ import argparse
 import requests
 
 def parse_args():
-    p = argparse.ArgumentParser(description="Update the dynamic DNS entry for a NameCheap hosted domain.")
-    p.add_argument("-H", "--hosts", required=True, help="The subdomains to update ('@' for root domain)")
+    p = argparse.ArgumentParser(description="Update DNS entries for a NameCheap hosted domain with dynamic DNS enabled.")
+    p.add_argument("-H", "--hosts", required=True, help="The subdomains to update separated by commas ('@' for root domain).")
     p.add_argument("-p", "--password", required=True, help="Your NameCheap dynamic DNS password.")
     p.add_argument("-d", "--domain", required=True, help="The root domain to update.")
     return p.parse_args()
